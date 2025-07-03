@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="favicon.png/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/estilos-noticias.css">
+  <link rel="stylesheet" href="css/estilos-inicio.css">
+  <link rel="stylesheet" href="css/estilos-formulario.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gob.pe</title>
+ 
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="top-banner">
+    <img src="img/Gob.pe.png" alt="Gob.pe" style="height: 50px; float: left;">
+    <h1>¡Bienvenido a Gob.pe!</h1>
+    <p>Plataforma Digital Única del Estado Peruano</p>
+  </header>
+
+  <!-- Noticias recientes -->
+  <section class="noticias">
+    <h2>Noticias Recientes</h2>
+    <div class="noticia">
+      <img src="img/Ejercicio_militar.png" alt="Ejército Militar">
+      <div>
+        <h3>Ejército Militar Nacional</h3>
+        <p>Celebración en Chorrillos por el acto cívico...</p>
+        <a href="https://www.gob.pe/ejercito" target="_blank" rel="noopener">Leer más</a>
+      </div>
+    </div>
+    <div class="noticia">
+      <img src="img/Asistencia_humanitaria.png" alt="Asistencia humanitaria">
+      <div>
+        <h3>Asistencia Humanitaria</h3>
+        <p>Se realizó una acción cívica de ayuda humanitaria...</p>
+        <a href="https://www.gob.pe/institucion/ccffaa/noticias/1199039-mas-de-17-mil-atenciones-medicas-y-sociales-en-pichari-durante-exitosa-campana-civica-liderada-por-el-comando-conjunto" target="_blank" rel="noopener">Leer más</a>
+      </div>
+    </div>
+  <button class="ver-todas" onclick="window.open('https://elperuano.pe', '_blank')">
+  Leer Todas las Noticias
+</button>
+
+  </section>
+
+  <!-- Catálogo -->
+  <section class="catalogo">
+    <h2>Catálogo de trámites y servicios</h2>
+    <p>Revisa los trámites y servicios destacados del Estado...</p>
+<input type="text" id="buscador" placeholder="Buscar trámites o servicios..." class="buscador">
+    <div class="categorias">
+      <div class="card">🧑‍🤝‍🧑 Ayuda Social
+        <img src="img/ayuda_social.png" alt="Ayuda Social" class="icono">
+  
+      </div>
+      <div class="card">📣 Denunciar o reclamar
+        <img src="img/img_denuncia.png" alt="Ayuda Social" class="icono">
+      </div>
+      <div class="card">🏃 Emprender
+        <img src="img/img_emprende.png" alt="Ayuda Social" class="icono">
+      </div>
+      <div class="card">🚗 Conducir
+        <img src="img/img_conducir.png" alt="Ayuda Social" class="icono">
+      </div>
+      <div class="card">📚 Educación
+        <img src="img/img_educacion.png" alt="Ayuda Social" class="icono">
+      </div>
+      <div class="card">👨‍👩‍👧‍👦 Familia
+        <img src="img/img_familia.png" alt="Ayuda Social" class="icono">
+      </div>
+    </div>
+  </section>
+
+<script>
+  const buscador = document.getElementById("buscador");
+  const tarjetas = document.querySelectorAll(".categorias .card");
+
+  buscador.addEventListener("input", () => {
+    const texto = buscador.value.toLowerCase();
+    tarjetas.forEach(card => {
+      const contenido = card.textContent.toLowerCase();
+      card.style.display = contenido.includes(texto) ? "block" : "none";
+    });
+  });
+</script>
+
+<section class="contacto">
+  <a href="index-formulario.html">
+  <button class="btn-contacto">Contáctanos</button>
+</a>
+</section>
+  
+
+<!-- Pie de página -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>Contáctanos: contacto@gob.pe</p>
+    <p>Teléfono: 123 456 789</p>
+    <p>&copy; 2025 Plataforma Digital Única del Estado Peruano. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
