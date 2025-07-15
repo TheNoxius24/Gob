@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #ff585e;
+  background-color: #e0222b;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -21,7 +21,7 @@ header h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: #e93535;
+  background-color: #ec5252;
   padding: 0.5rem 0;
 }
 
